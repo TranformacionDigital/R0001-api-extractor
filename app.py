@@ -153,7 +153,7 @@ def extractor_api():
 
 @app.route('/on', methods=['GET'])
 def on():
-    return "Servidor encendido en azure txdx"
+    return "Servidor encendido en azure TXDX"
 
 @app.route('/validar_pdf', methods=['POST'])
 def validar_pdf():
