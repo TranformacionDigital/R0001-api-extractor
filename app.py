@@ -16,7 +16,7 @@ def runAnalysis(data_bytes):
     global ResultadosSucios
     endpoint = r"https://reconocedor-csf.cognitiveservices.azure.com/"
     apim_key = "3f6c15d94d644bee943dfc87ace17e70"
-    model_id = "49ff6d57-bd51-4e6d-9155-340d0e1d4f6c"
+    model_id = "26b436d2-cd14-4939-99ed-24244c0f9784"
     API_version = "v2.1"
 
     post_url = endpoint + "/formrecognizer/%s/custom/models/%s/analyze" % (API_version, model_id)
@@ -102,7 +102,9 @@ def extractor():
         "EntreCalle",
         "Numero",
         "YCalle",
-        "RegimenCapital"
+        "RegimenCapital",
+        "LugarExpedicion",
+        "FechaExpedicion"
     ]
     resultados_limpios = {}
 
@@ -153,7 +155,7 @@ def extractor_api():
 
 @app.route('/on', methods=['GET'])
 def on():
-    return "Servidor encendido en azure TXDX"
+    return "Servidor encendido en azure TXDX 1.0"
 
 @app.route('/validar_pdf', methods=['POST'])
 def validar_pdf():
